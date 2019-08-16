@@ -7,6 +7,6 @@ at Dongseo University. It is basically a bunch of copied, pasted and modified co
 kinect might be used to capture motion for animation.
 The original project with the base assets is somewhere around Github, credits to the original creator.
 
-## Temporal Screen Space Reflections
+## Poster
 ![alt text](Graphic/explosivegksMocap.png)  
 
