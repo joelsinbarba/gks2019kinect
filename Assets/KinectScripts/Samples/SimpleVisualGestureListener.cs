@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SimpleVisualGestureListener : MonoBehaviour, VisualGestureListenerInterface
 {
@@ -7,10 +8,10 @@ public class SimpleVisualGestureListener : MonoBehaviour, VisualGestureListenerI
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-Text to display the discrete gesture information.")]
-	public GUIText discreteInfo;
+	public Text discreteInfo;
 
 	[Tooltip("GUI-Text to display the continuous gesture information.")]
-	public GUIText continuousInfo;
+	public Text continuousInfo;
 
 
 	private bool discreteGestureDisplayed;

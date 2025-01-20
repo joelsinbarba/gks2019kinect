@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public class OverlayController : MonoBehaviour 
 {
 	[Tooltip("GUI-texture used to display the color camera feed on the scene background.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Camera used to display the background image from the Kinect point of view.")]
 	public Camera backgroundCamera;
@@ -78,11 +79,11 @@ public class OverlayController : MonoBehaviour
 				
 			}
 			
-			if(backgroundImage)
+			if(backgroundImage != null)
 			{
-				if(backgroundImage.texture == null)
+				if(backgroundImage.image == null)
 				{
-					backgroundImage.texture = manager.GetUsersClrTex();
+					backgroundImage.image = manager.GetUsersClrTex();
 					//backgroundImage.texture = BackgroundRemovalManager.Instance.GetForegroundTex();
 				}
 			}

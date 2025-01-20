@@ -1,12 +1,15 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
+
 //using Windows.Kinect;
 
 
 public class HandColorOverlayer : MonoBehaviour 
 {
 	[Tooltip("GUI-texture used to display the color camera feed on the scene background.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Camera used to estimate the overlay positions of 3D-objects over the background. By default it is the main camera.")]
 	public Camera foregroundCamera;
@@ -42,9 +45,9 @@ public class HandColorOverlayer : MonoBehaviour
 		if(manager && manager.IsInitialized() && foregroundCamera)
 		{
 			//backgroundImage.renderer.material.mainTexture = manager.GetUsersClrTex();
-			if(backgroundImage && (backgroundImage.texture == null))
+			if(backgroundImage != null && (backgroundImage.image == null))
 			{
-				backgroundImage.texture = manager.GetUsersClrTex();
+				backgroundImage.image = manager.GetUsersClrTex();
 			}
 
 			// get the background rectangle (use the portrait background, if available)

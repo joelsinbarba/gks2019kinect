@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadLevelWithDelay : MonoBehaviour 
 {
@@ -14,7 +15,7 @@ public class LoadLevelWithDelay : MonoBehaviour
 	public bool validateKinectManager = true;
 
 	[Tooltip("GUI-Text used to display the debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 	private float timeToLoadLevel = 0f;
 	private bool levelLoaded = false;

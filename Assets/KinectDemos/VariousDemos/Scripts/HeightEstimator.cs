@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 public class HeightEstimator : MonoBehaviour 
 {
@@ -7,13 +9,13 @@ public class HeightEstimator : MonoBehaviour
 //	public int playerIndex = 0;
 
 	[Tooltip("GUI-texture used to display the tracked users on scene background.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Smoothing factor used for height estimation.")]
 	public float smoothFactor = 5f;
 
 	[Tooltip("GUI-Text to display status messages.")]
-	public GUIText statusText;
+	public Text statusText;
 
 	[Tooltip("Estimated user-silhouette height, in meters.")]
 	private float userHeight;
@@ -45,13 +47,14 @@ public class HeightEstimator : MonoBehaviour
 
 		if (manager && manager.IsInitialized ()) 
 		{
-			if(backgroundImage)
+			if(backgroundImage != null)
 			{
-				Vector3 localScale = backgroundImage.transform.localScale;
+				// !TODO: update
+				/*Vector3 localScale = backgroundImage.transform.localScale;
 				localScale.x = (float)manager.GetDepthImageWidth() * (float)Screen.height / ((float)manager.GetDepthImageHeight() * (float)Screen.width);
 				localScale.y = -1f;
 
-				backgroundImage.transform.localScale = localScale;
+				backgroundImage.transform.localScale = localScale;*/
 			}
 		}
 	}
@@ -110,9 +113,9 @@ public class HeightEstimator : MonoBehaviour
 				}
 			}
 
-			if (backgroundImage) 
+			if (backgroundImage != null) 
 			{
-				backgroundImage.texture = depthImage;
+				backgroundImage.image = depthImage;
 			}
 		}
 	}

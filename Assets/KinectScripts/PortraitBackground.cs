@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// Sets the color background image in portrait mode. The aspect ratio of the game view should be set to 9:16 for Kinect-v2 or 3:4 for Kinect-v1.
@@ -107,10 +108,10 @@ public class PortraitBackground : MonoBehaviour
 			float fScreenWidth = (float)Screen.height * fFactorSW;
 			float fAbsOffsetX = fDeltaWidth / 2f;
 
-			GUITexture guiTexture = GetComponent<GUITexture>();
-			if(guiTexture)
+			Image guiTexture = GetComponent<Image>();
+			if(guiTexture != null)
 			{
-				guiTexture.pixelInset = new Rect(dOffsetX, 0, fDeltaWidth, 0);
+				guiTexture.contentRect.Set(dOffsetX, 0, fDeltaWidth, 0);//pixelInset = new Rect(dOffsetX, 0, fDeltaWidth, 0);
 			}
 
 			backgroundRect = new Rect(dOffsetX, 0, fScreenWidth, Screen.height);

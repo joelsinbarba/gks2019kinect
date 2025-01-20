@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using System.Runtime.InteropServices;
 using System.Text;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -54,7 +55,7 @@ public class FacetrackingManager : MonoBehaviour
 	public float verticalMeshOffset = 0f;
 
 	[Tooltip("GUI-Text to display the FT-manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 //	// nose and head transforms
 //	public Transform noseTransform;

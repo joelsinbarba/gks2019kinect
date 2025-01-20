@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 class UserMovieSequence : MonoBehaviour
 {
@@ -10,7 +12,7 @@ class UserMovieSequence : MonoBehaviour
 	public float limitLeftRight = 1.2f;
 
 	[Tooltip("GUI texture to display the movie frames.")]
-	public GUITexture movieGuiTexture = null;
+	public Image movieGuiTexture = null;
 
 	[Tooltip("Seuqence of frames in the movie (left to right).")]
 	public Texture[] frameTextures = null;
@@ -22,7 +24,7 @@ class UserMovieSequence : MonoBehaviour
 	public int currentFrame = 0;
 
 	[Tooltip("GUI-Text to display status messages.")]
-	public GUIText statusText = null;
+	public Text statusText = null;
 
 
 	private KinectManager kinectManager;
@@ -73,9 +75,9 @@ class UserMovieSequence : MonoBehaviour
 			{
 				Texture tex = frameTextures[currentFrame];
 
-				if (movieGuiTexture) 
+				if (movieGuiTexture != null) 
 				{
-					movieGuiTexture.texture = tex;
+					movieGuiTexture.image = tex;
 				}
 			}
 

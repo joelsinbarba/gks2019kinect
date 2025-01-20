@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GrabRotateScript : MonoBehaviour, InteractionListenerInterface
 {
@@ -13,7 +14,7 @@ public class GrabRotateScript : MonoBehaviour, InteractionListenerInterface
 	public Camera screenCamera;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoGuiText;
+	public Text infoGuiText;
 
 	[Tooltip("Interaction manager instance, used to detect hand interactions. If left empty, it will be the first interaction manager found in the scene.")]
 	public InteractionManager interactionManager;

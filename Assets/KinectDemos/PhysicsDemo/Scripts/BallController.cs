@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 //using Windows.Kinect;
 
 
@@ -21,7 +23,7 @@ public class BallController : MonoBehaviour
 	public float velocityScale = 5f;
 	
 	[Tooltip("GUI-Text to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 	public enum BallState : int { Hidden, HandRaise, BallThrow, BallWait }
 	[Tooltip("Current state of the ball.")]
@@ -190,7 +192,7 @@ public class BallController : MonoBehaviour
 
 					if (rb) 
 					{
-						rb.velocity = throwDir * velocity * velocityScale;
+						rb.linearVelocity = throwDir * velocity * velocityScale;
 						rb.isKinematic = false;
 					}
 

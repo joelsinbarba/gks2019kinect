@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// This interface needs to be implemented by all cloud-face listeners
@@ -25,7 +26,7 @@ public class CloudFaceDetector : MonoBehaviour
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-text used for information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 	[HideInInspector]
 	public string userGender;  // detected user gender

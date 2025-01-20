@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SimpleInteractionListener : MonoBehaviour, InteractionListenerInterface
 {
@@ -7,7 +8,7 @@ public class SimpleInteractionListener : MonoBehaviour, InteractionListenerInter
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-Text to display the interaction information.")]
-	public GUIText interactionInfo;
+	public Text interactionInfo;
 
 	private bool intInfoDisplayed;
 	private float intInfoTime;

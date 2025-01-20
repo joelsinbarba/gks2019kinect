@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 //using Windows.Kinect;
 
 
@@ -18,7 +20,7 @@ public class JointOrientationView : MonoBehaviour
 	public float smoothFactor = 5f;
 
 	[Tooltip("GUI-Text to display the current joint rotation.")]
-	public GUIText debugText;
+	public Text debugText;
 	
 	private Quaternion initialRotation = Quaternion.identity;
 

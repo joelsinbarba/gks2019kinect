@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using UnityEngine.UI;
 #if !(UNITY_WSA_10_0 && NETFX_CORE)
 using Microsoft.Kinect.VisualGestureBuilder;
 using Windows.Kinect;
@@ -73,7 +74,7 @@ public class VisualGestureManager : MonoBehaviour
 	public List<MonoBehaviour> visualGestureListeners;
 	
 	[Tooltip("GUI-Text to display the VG-manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 
 	// primary user ID, as reported by KinectManager

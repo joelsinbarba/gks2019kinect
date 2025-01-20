@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using System;
+using UnityEngine.UI;
 
 
 public class PhotoShooter : MonoBehaviour
@@ -16,7 +17,7 @@ public class PhotoShooter : MonoBehaviour
 	public Transform[] countdown;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 
 	/// <summary>

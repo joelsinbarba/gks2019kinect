@@ -154,7 +154,7 @@ public class SetFaceTexture : MonoBehaviour
 
 			if(faceTex.width != faceW || faceTex.height != faceH)
 			{
-				faceTex.Resize(faceW, faceH);
+				faceTex.Reinitialize(faceW, faceH);
 			}
 
 			if (foregroundTex) 

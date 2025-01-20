@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
+
 //using Windows.Kinect;
 
 public class CubeGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
@@ -9,7 +11,7 @@ public class CubeGestureListener : MonoBehaviour, KinectGestures.GestureListener
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-Text to display gesture-listener messages and gesture information.")]
-	public GUIText gestureInfo;
+	public Text gestureInfo;
 
 	// singleton instance of the class
 	private static CubeGestureListener instance = null;

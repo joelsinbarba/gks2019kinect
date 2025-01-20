@@ -2,6 +2,7 @@ using UnityEngine;
 //using Windows.Kinect;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 
 public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListenerInterface
@@ -10,7 +11,7 @@ public class SimpleGestureListener : MonoBehaviour, KinectGestures.GestureListen
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-Text to display gesture-listener messages and gesture information.")]
-	public GUIText gestureInfo;
+	public Text gestureInfo;
 	
 	// private bool to track if progress message has been displayed
 	private bool progressDisplayed;

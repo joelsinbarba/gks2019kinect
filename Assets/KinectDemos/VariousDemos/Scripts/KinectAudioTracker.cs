@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using Microsoft.Kinect;
 using Windows.Kinect;
-
+using UnityEngine.UI;
 using KinectAudioSource = Windows.Kinect.AudioSource;
 
 
 public class KinectAudioTracker : MonoBehaviour
 {
 	[Tooltip("GUI-Text to display status messages.")]
-	public GUIText statusText;
+	public Text statusText;
 
 	[Tooltip("Last observed audio beam angle in radians, in the range [-pi/2, +pi/2]")]
 	[NonSerialized]

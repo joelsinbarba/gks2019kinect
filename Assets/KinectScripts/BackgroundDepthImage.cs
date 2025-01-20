@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// Background depth image is component that displays the depth camera image on GUI texture, usually the scene background.
@@ -7,7 +8,7 @@ using System.Collections;
 public class BackgroundDepthImage : MonoBehaviour 
 {
 	[Tooltip("GUI-texture used to display the depth image.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Camera that will be used to display the background image.")]
 	public Camera backgroundCamera;
@@ -19,9 +20,9 @@ public class BackgroundDepthImage : MonoBehaviour
 
 		if (manager && manager.IsInitialized()) 
 		{
-			if (backgroundImage && (backgroundImage.texture == null)) 
+			if (backgroundImage != null && (backgroundImage.image == null)) 
 			{
-				backgroundImage.texture = manager.GetUsersLblTex();
+				backgroundImage.image = manager.GetUsersLblTex();
 
 				KinectInterop.SensorData sensorData = manager.GetSensorData();
 				if (sensorData != null && sensorData.sensorInterface != null && backgroundCamera != null) 
@@ -48,7 +49,7 @@ public class BackgroundDepthImage : MonoBehaviour
 					float bottomY = -deltaHeight / 2;
 					float topY = deltaHeight;
 
-					backgroundImage.pixelInset = new Rect(leftX, bottomY, rightX, topY);
+					backgroundImage.contentRect.Set(leftX, bottomY, rightX, topY); //(x,y, width,height) = new Rect(leftX, bottomY, rightX, topY);
 				}
 			}
 		}	

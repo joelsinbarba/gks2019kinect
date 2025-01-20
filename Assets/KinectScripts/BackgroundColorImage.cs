@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 /// <summary>
 /// Background color image is component that displays the color camera feed on GUI texture, usually the scene background.
@@ -7,7 +9,7 @@ using System.Collections;
 public class BackgroundColorImage : MonoBehaviour 
 {
 	[Tooltip("GUI-texture used to display the color camera feed.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 
 	void Update () 
@@ -16,9 +18,9 @@ public class BackgroundColorImage : MonoBehaviour
 
 		if (manager && manager.IsInitialized()) 
 		{
-			if (backgroundImage && (backgroundImage.texture == null)) 
+			if (backgroundImage != null && (backgroundImage.image == null)) 
 			{
-				backgroundImage.texture = manager.GetUsersClrTex();
+				backgroundImage.image = manager.GetUsersClrTex();
 			}
 		}	
 	}

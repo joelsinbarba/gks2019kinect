@@ -99,7 +99,7 @@ public class InteractionManager : MonoBehaviour
 	public List<MonoBehaviour> interactionListeners;
 
 	[Tooltip("GUI-Text to display the interaction-manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 	// tracked userId
 	private long playerUserID = 0;

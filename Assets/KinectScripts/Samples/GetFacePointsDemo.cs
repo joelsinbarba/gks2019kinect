@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Kinect.Face;
+using UnityEngine.UI;
 
 
 public class GetFacePointsDemo : MonoBehaviour 
@@ -17,7 +18,7 @@ public class GetFacePointsDemo : MonoBehaviour
 	public Transform facePointTransform;
 	
 	[Tooltip("GUI-Text to display face-information messages.")]
-	public GUIText faceInfoText;
+	public Text faceInfoText;
 
 	private KinectManager manager = null;
 	private FacetrackingManager faceManager = null;

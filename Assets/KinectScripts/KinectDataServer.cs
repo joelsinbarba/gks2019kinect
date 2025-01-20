@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using UnityEngine.Networking.Types;
+// using UnityEngine.Networking.Types;
 
 /// <summary>
 /// Kinect data server is the component that transmits the Kinect body data to Kinect data clients over the network.
 /// </summary>
 public class KinectDataServer : MonoBehaviour 
 {
-	[Tooltip("Port to be used for incoming connections.")]
+	/*[Tooltip("Port to be used for incoming connections.")]
 	public int listenOnPort = 8888;
 
 	[Tooltip("Port used for server broadcast discovery.")]
@@ -32,10 +32,10 @@ public class KinectDataServer : MonoBehaviour
 	public GUITexture backgroundImage;
 
 	[Tooltip("GUI-Text to display connection status messages.")]
-	public GUIText connStatusText;
+	public Text connStatusText;
 
 	[Tooltip("GUI-Text to display server status messages.")]
-	public GUIText serverStatusText;
+	public Text serverStatusText;
 
 	[Tooltip("UI-Text to display server console.")]
 	public Text consoleMessages;
@@ -852,6 +852,6 @@ public class KinectDataServer : MonoBehaviour
 //		} 
 //
 //		return (btFaceTriangles != null);
-//	}
+//	}*/
 
 }

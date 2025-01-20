@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class LinePainter : MonoBehaviour 
 {
@@ -8,7 +9,7 @@ public class LinePainter : MonoBehaviour
 	public LineRenderer linePrefab;
 
 	[Tooltip("GUI-Text to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 
 	private HandOverlayer handOverlayer = null;

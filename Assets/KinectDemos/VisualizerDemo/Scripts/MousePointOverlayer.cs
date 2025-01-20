@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MousePointOverlayer : MonoBehaviour 
 {
@@ -13,7 +14,7 @@ public class MousePointOverlayer : MonoBehaviour
 	public Camera foregroundCamera;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 
 	// reference to the singleton instance of KM

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// Avatar scaler is the component that scales avatar's body, according to body measures of the user.
@@ -42,7 +43,7 @@ public class AvatarScaler : MonoBehaviour
 //	public bool fixModelHipsAndShoulders = false;
 
 	[Tooltip("GUI-Text to display the avatar-scaler debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 	
 	// used by category selector
 	[System.NonSerialized]

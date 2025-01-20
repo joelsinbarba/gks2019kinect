@@ -1,6 +1,7 @@
 ﻿#if !(UNITY_WSA_10_0 && NETFX_CORE)
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GetFaceSmileStatus : MonoBehaviour 
 {
@@ -9,7 +10,7 @@ public class GetFaceSmileStatus : MonoBehaviour
 	public int playerIndex = 0;
 
 	[Tooltip("GUI-Text to display the FT-manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 	[Tooltip("Currently detected smile status.")]
 	public Windows.Kinect.DetectionResult smileStatus = Windows.Kinect.DetectionResult.Unknown;

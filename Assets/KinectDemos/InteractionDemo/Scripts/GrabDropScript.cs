@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GrabDropScript : MonoBehaviour, InteractionListenerInterface
 {
@@ -28,7 +29,7 @@ public class GrabDropScript : MonoBehaviour, InteractionListenerInterface
 	public Camera screenCamera;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoGuiText;
+	public Text infoGuiText;
 
 	[Tooltip("Interaction manager instance, used to detect hand interactions. If left empty, it will be the first interaction manager found in the scene.")]
 	public InteractionManager interactionManager;
@@ -220,7 +221,7 @@ public class GrabDropScript : MonoBehaviour, InteractionListenerInterface
 		for(int i = 0; i < draggableObjects.Length; i++)
 		{
 			draggableObjects[i].GetComponent<Rigidbody>().useGravity = false;
-			draggableObjects[i].GetComponent<Rigidbody>().velocity = Vector3.zero;
+			draggableObjects[i].GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
 
 			draggableObjects[i].transform.position = screenCamera ? screenCamera.transform.TransformPoint(initialObjPos[i]) : initialObjPos[i];
 			draggableObjects[i].transform.rotation = screenCamera ? screenCamera.transform.rotation * initialObjRot[i] : initialObjRot[i];

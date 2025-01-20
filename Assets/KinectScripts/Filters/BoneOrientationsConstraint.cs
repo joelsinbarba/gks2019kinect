@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -16,7 +17,7 @@ public class BoneOrientationsConstraint
 	// list of joint constraints
     private readonly List<BoneOrientationConstraint> jointConstraints = new List<BoneOrientationConstraint>();
 
-	private GUIText debugText;
+	private Text debugText;
 
 	private long frameNum = 0;
 	//private float currentTime = 0f;
@@ -27,7 +28,7 @@ public class BoneOrientationsConstraint
     {
     }
 
-	public void SetDebugText(GUIText debugText)
+	public void SetDebugText(Text debugText)
 	{
 		this.debugText = debugText;
 	}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Text;
+using UnityEngine.UI;
 
 public class HandObjectChecker : MonoBehaviour 
 {
@@ -17,7 +18,7 @@ public class HandObjectChecker : MonoBehaviour
 	public float fillThreshold = 0.5f;
 
 	[Tooltip("GUI-Text to display status messages.")]
-	public GUIText statusText;
+	public Text statusText;
 
 	private long trackedUserId;
 	private byte userBodyIndex;

@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UIElements;
+
 //using Windows.Kinect;
 
 
 public class JointOverlayer : MonoBehaviour 
 {
 	[Tooltip("GUI-texture used to display the color camera feed on the scene background.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Camera that will be used to overlay the 3D-objects over the background.")]
 	public Camera foregroundCamera;
@@ -58,9 +60,9 @@ public class JointOverlayer : MonoBehaviour
 		if(manager && manager.IsInitialized() && foregroundCamera)
 		{
 			//backgroundImage.renderer.material.mainTexture = manager.GetUsersClrTex();
-			if(backgroundImage && (backgroundImage.texture == null))
+			if(backgroundImage != null && (backgroundImage.image == null))
 			{
-				backgroundImage.texture = manager.GetUsersClrTex();
+				backgroundImage.image = manager.GetUsersClrTex();
 			}
 			
 			// get the background rectangle (use the portrait background, if available)

@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 //using Windows.Kinect;
 
 
@@ -29,7 +31,7 @@ public class JointPositionView : MonoBehaviour
 	public float smoothFactor = 5f;
 
 	[Tooltip("GUI-Text to display the current joint position.")]
-	public GUIText debugText;
+	public Text debugText;
 
 
 	private Vector3 initialPosition = Vector3.zero;

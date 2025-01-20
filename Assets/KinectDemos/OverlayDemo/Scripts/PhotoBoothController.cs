@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 public class PhotoBoothController : MonoBehaviour, KinectGestures.GestureListenerInterface, InteractionListenerInterface
 {
 	[Tooltip("GUI-texture used to display the color camera feed on the scene background.")]
-	public GUITexture backgroundImage;
+	public Image backgroundImage;
 
 	[Tooltip("Camera that will be used to render the background.")]
 	public Camera backroundCamera;
@@ -35,7 +37,7 @@ public class PhotoBoothController : MonoBehaviour, KinectGestures.GestureListene
 	public Transform[] chestMasks;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 
 	private int maskCount = 0;
@@ -63,9 +65,9 @@ public class PhotoBoothController : MonoBehaviour, KinectGestures.GestureListene
 
 		if (manager && manager.IsInitialized ()) 
 		{
-			if (backgroundImage && (backgroundImage.texture == null)) 
+			if (backgroundImage != null && (backgroundImage.image == null)) 
 			{
-				backgroundImage.texture = manager.GetUsersClrTex ();
+				backgroundImage.image = manager.GetUsersClrTex ();
 			}
 		}
 

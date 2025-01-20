@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -37,7 +38,7 @@ public class BackgroundRemovalManager : MonoBehaviour
 	public int dilateIterations = 0; // 3;
 
 	[Tooltip("GUI-Text to display the BR-Manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 	// buffer for the raw foreground image
 	private byte[] foregroundImage;

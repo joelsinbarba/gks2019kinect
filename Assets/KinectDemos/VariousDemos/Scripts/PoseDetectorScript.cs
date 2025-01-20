@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine.UI;
 
 public class PoseDetectorScript : MonoBehaviour 
 {
@@ -18,7 +19,7 @@ public class PoseDetectorScript : MonoBehaviour
 	public float matchThreshold = 0.7f;
 
 	[Tooltip("GUI-Text to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 	// match percent (between 0 and 1)
 	private float fMatchPercent = 0f;

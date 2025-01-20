@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 public class ForegroundToImage : MonoBehaviour 
 {
@@ -10,11 +12,11 @@ public class ForegroundToImage : MonoBehaviour
 
 		if(backManager && backManager.IsBackgroundRemovalInitialized())
 		{
-			GUITexture guiTexture = GetComponent<GUITexture>();
+			Image guiTexture = GetComponent<Image>();
 
-			if(guiTexture && guiTexture.texture == null)
+			if(guiTexture != null && guiTexture.image == null)
 			{
-				guiTexture.texture = backManager.GetForegroundTex();
+				guiTexture.image = backManager.GetForegroundTex();
 			}
 		}
 	}

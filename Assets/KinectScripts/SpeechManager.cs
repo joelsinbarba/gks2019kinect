@@ -4,6 +4,7 @@ using System.Collections;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -41,7 +42,7 @@ public class SpeechManager : MonoBehaviour
 	public List<MonoBehaviour> speechRecognitionListeners;
 
 	[Tooltip("GUI-Text to display the speech-manager debug messages.")]
-	public GUIText debugText;
+	public Text debugText;
 
 	// Is currently listening
 	private bool isListening;

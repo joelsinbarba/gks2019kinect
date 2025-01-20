@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CategorySelector : MonoBehaviour, KinectGestures.GestureListenerInterface, CloudFaceListenerInterface
 {
@@ -19,7 +20,7 @@ public class CategorySelector : MonoBehaviour, KinectGestures.GestureListenerInt
 //	public bool fixModelHipsAndShoulders = false;
 
 	[Tooltip("GUI-Text used to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
 
 
 	// available model selectors

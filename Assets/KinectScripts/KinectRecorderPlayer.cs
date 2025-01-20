@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using UnityEngine.UI;
 
 /// <summary>
 /// Kinect recorder and player is the component that manages recording and replaying of Kinect body-data files.
@@ -11,7 +12,8 @@ public class KinectRecorderPlayer : MonoBehaviour
 	public string filePath = "BodyRecording.txt";
 
 	[Tooltip("GUI-Text to display information messages.")]
-	public GUIText infoText;
+	public Text infoText;
+
 
 	[Tooltip("Whether to start playing the recorded data, right after the scene start.")]
 	public bool playAtStart = false;

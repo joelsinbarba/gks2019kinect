@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -33,7 +34,7 @@ class SimpleHolographicCamera : MonoBehaviour
 	public float maxUserDistance = 3f;
 
 	[Tooltip("GUI-Text to display status messages.")]
-	public GUIText statusText = null;
+	public Text statusText = null;
 
 	private float left = -0.2F;
 	private float right = 0.2F;
